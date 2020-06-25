@@ -25,7 +25,7 @@ namespace CT.DDS.Training.IDP
                 new ApiResource("employeeapi","CT.DDS.Training.Blazor.EmployeeApi",new List<string>{ "role"}){
 
                 Scopes = {
-                        new Scope("employeeApi","employeeApi")
+                        new Scope("employeeapi.read","employeeapi.read")
                     }
 
                 } };
@@ -44,7 +44,7 @@ namespace CT.DDS.Training.IDP
                     RedirectUris = { "https://localhost:44346/authentication/login-callback"},
                     PostLogoutRedirectUris = { "https://localhost:44346/authentication/logout-callback" },
                     AllowedScopes = {IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile, IdentityServerConstants.StandardScopes.Email, "role","employeeapi"}
+                        IdentityServerConstants.StandardScopes.Profile, IdentityServerConstants.StandardScopes.Email, "role","employeeapi.read"}
                 }
             };
 
